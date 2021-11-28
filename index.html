@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<script>
+    var currentLogo = 1
+    function toggleLogo() {
+        if (currentLogo < 3) { currentLogo += 1           } 
+        else { currentLogo = 1 }
+        document.getElementById('logomark').src='assets/logo-' + currentLogo + '.png'
+    }
+</script>
+
+<body>
+    <div id="header">
+        <a id="logo" onclick="toggleLogo()">
+            <img id="logomark" src="assets/logo.svg">
+            <div id="textmark">
+                <p>The</p>
+                <p>Global Report</p>    
+            </div>    
+        </a>
+        <div id="nav">
+            <a>About</a>
+            <a>Subscribe</a>
+        </div>
+    </div>
+</body>
+
+</html>
