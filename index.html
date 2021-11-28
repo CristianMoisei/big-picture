@@ -3,14 +3,15 @@
 <head>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reset.css">
+
+    <meta name="theme-color" content="#02151F">
 </head>
 
 <script>
-    var currentLogo = 1
+    var currentLogo = true
     function toggleLogo() {
-        if (currentLogo < 3) { currentLogo += 1           } 
-        else { currentLogo = 1 }
-        document.getElementById('logomark').src='assets/logo-' + currentLogo + '.png'
+        currentLogo = !currentLogo
+        document.getElementById('logomark').src='assets/logo' + (currentLogo ? '.svg' : '.png') 
     }
 </script>
 
