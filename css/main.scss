@@ -66,7 +66,7 @@ body {
     
             cursor: pointer;
             padding: 20px;
-            opacity: 0.9;
+            opacity: 0.8;
             height: initial;
             height: 60px;
         }
@@ -94,4 +94,87 @@ body {
             height: 100px;
         }
     }
+}
+
+#content {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    color: $navy;
+
+    .article {
+        cursor: pointer;
+        border: 1px solid rgba($color: $navy, $alpha: 0.2);
+        background-color: rgba($color: $navy, $alpha: 0.03);
+        border-radius: 16px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    
+        &:hover {
+            background-color: rgba($color: $navy, $alpha: 0.1);
+        }
+        
+        .main-content {
+            display: flex;
+            flex-direction: row;
+
+            .number {
+                opacity: 0.2;
+                margin: 0 30px 0 50px;
+            }
+    
+            .article-text {
+                padding: 30px;
+    
+                h3 {
+                    font-size: 28px;
+                    font-weight: 700;
+                }
+        
+                .tagline {
+                    font-size: 17px;
+                    opacity: 0.8;
+                    margin-top: 6px;
+                }    
+            }
+
+            .cta {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 12px;
+                margin-top: 30px;
+                width: 140px;
+            
+        
+                cursor: pointer;
+                padding: 12px 20px;
+                border-radius: 8px;
+                background-color: rgba($color: $navy, $alpha: 0.1);
+        
+                img {
+                    margin-left: 16px;
+                }
+            }
+    
+        }
+
+
+        .cover {
+            min-width: 300px;
+            object-fit: scale-down;
+            background-size: cover;
+            background-position: center;
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+
+    }
+
+
+
 }
