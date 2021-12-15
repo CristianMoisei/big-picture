@@ -7,17 +7,9 @@
     <meta name="theme-color" content="#02151F">
 </head>
 
-<script>
-    var currentLogo = true
-    function toggleLogo() {
-        currentLogo = !currentLogo
-        document.getElementById('logomark').src='assets/logo' + (currentLogo ? '.svg' : '.png') 
-    }
-</script>
-
 <body>
     <div id="header">
-        <a id="logo" onclick="toggleLogo()">
+        <a id="logo">
             <img id="logomark" src="assets/logo.svg">
             <div id="textmark">
                 <p>The</p>
@@ -25,20 +17,20 @@
             </div>    
         </a>
         <div id="nav">
-            <a>About</a>
-            <a>Twitter</a>
-            <a>Medium</a>
+            <a href="about.html">About</a>
+            <a class="hidden-on-mobile" target="_blank" href="https://twitter.com/cristianmoisei">Twitter</a>
+            <a class="hidden-on-mobile" target="_blank">Medium</a>
         </div>
     </div>
 
     <div id="content">
 
-        <div class="article">
+        <div class="article-card">
             <div class="left-side">
                 <p class="date">Published in January 2022</p>
                 <h3>Is the United States truly in decline?</h3>
                 <p class="tagline">An impartial look at the key indicators and the story they tell</p>
-                <div class="cta">
+                <div class="cta" onclick="location.href = 'us-decline.html';">
                     <a>Read</a>
                     <img src="assets/chevron.svg">
                 </div>        
@@ -46,9 +38,9 @@
             <div class="cover" id="first-cover"></div>
         </div>
 
-        <div id="more-articles">
+        <!-- <div id="more-articles">
             <p>More reports coming soon</p>
-        </div>
+        </div> -->
 
     </div>
 </body>
