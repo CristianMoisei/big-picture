@@ -100,7 +100,7 @@ a {
 
 #header #header-container #nav a {
   position: relative;
-  padding: 12px 0;
+  padding: 8px 0;
   margin: 16px;
   overflow: hidden;
   color: #02151F;
@@ -267,18 +267,18 @@ a {
   border-bottom-right-radius: 16px;
 }
 
-@media screen and (max-width: 880px) {
-  .article-card .cover {
-    display: none;
-  }
-}
-
 .article {
   background-color: white;
   border-radius: 20px;
   padding: 40px;
   max-width: 740px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 880px) {
+  .article {
+    display: none;
+  }
 }
 
 .article h1 {
