@@ -7,21 +7,13 @@ body {
   background-color: #f1f7fb;
 }
 
-@media screen and (max-width: 880px) {
-  body {
-    margin: 20px !important;
-  }
-}
-
 a {
   cursor: pointer;
   text-decoration: none;
 }
 
-@media screen and (max-width: 440px) {
-  .hidden-on-mobile {
-    display: none;
-  }
+.bold {
+  font-weight: 900;
 }
 
 #header {
@@ -35,7 +27,6 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: white;
-  width: 100%;
   color: #02151F;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(3, 22, 31, 0.1);
           box-shadow: 0px 0px 20px 0px rgba(3, 22, 31, 0.1);
@@ -73,29 +64,36 @@ a {
   text-decoration: none;
 }
 
-#header #header-container #logo #logomark {
-  height: 40px;
-  margin-right: 16px;
-}
-
-#header #header-container #logo #textmark {
-  font-size: 18px;
-  text-transform: uppercase;
-  line-height: 1.2;
-}
-
-#header #header-container #logo #textmark :first-child {
-  font-weight: 300;
-}
-
-#header #header-container #logo #textmark :last-child {
-  font-weight: 700;
+@media screen and (max-width: 1000px) {
+  #header #header-container #logo {
+    padding-left: 20px;
+  }
 }
 
 #header #header-container #nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 630px) {
+  #header #header-container #nav {
+    display: none;
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 24px;
+  }
 }
 
 #header #header-container #nav a {
@@ -106,9 +104,10 @@ a {
   color: #02151F;
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 630px) {
   #header #header-container #nav a {
-    margin: 20px 4px;
+    margin: 0;
+    padding: 32px;
   }
 }
 
@@ -129,7 +128,7 @@ a {
           transform: translate3d(-100%, 0, 0);
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 630px) {
   #header #header-container #nav a::after {
     opacity: 0;
   }
@@ -161,6 +160,12 @@ a {
   color: #02151F;
 }
 
+@media screen and (max-width: 1000px) {
+  #content {
+    margin: 20px;
+  }
+}
+
 .article-card {
   border-radius: 20px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 22, 31, 0.6)), to(rgba(3, 22, 31, 0.6))), url("../assets/covers/1.jpg");
@@ -180,9 +185,9 @@ a {
   padding-left: 80px;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 630px) {
   .article-card {
-    height: initial;
+    padding: 0 30px;
   }
 }
 
@@ -198,6 +203,16 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 360px;
+}
+
+@media screen and (max-width: 630px) {
+  .article-card #text {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: initial;
+  }
 }
 
 .article-card #text h3 {
@@ -267,18 +282,57 @@ a {
   border-bottom-right-radius: 16px;
 }
 
+.about-card {
+  border-radius: 20px;
+  background-color: rgba(2, 21, 31, 0.07);
+  padding: 30px 0 30px 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 630px) {
+  .about-card {
+    padding: 40px;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+.about-card h4 {
+  font-weight: 700;
+  font-size: 24;
+  padding-bottom: 16px;
+  opacity: 0.65;
+}
+
+.about-card p {
+  opacity: 0.65;
+  line-height: 1.4;
+}
+
+.about-card img {
+  opacity: 0.07;
+  margin-left: 80px;
+  height: 200px;
+}
+
+@media screen and (max-width: 630px) {
+  .about-card img {
+    display: none;
+  }
+}
+
 .article {
   background-color: white;
   border-radius: 20px;
   padding: 40px;
   max-width: 740px;
   margin: 0 auto;
-}
-
-@media screen and (max-width: 880px) {
-  .article {
-    display: none;
-  }
 }
 
 .article h1 {
