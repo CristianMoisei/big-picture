@@ -3,7 +3,7 @@
 <head>
     <title>Is the United States truly in decline?</title>
     <script src="components/meta.js"></script>
-    <script src="components/chart-js/dist/chart.js"></script>
+    <script src="components/charts/library.js"></script>
     <script src="components/tableOfContents/generator.js"></script>
     <script src="components/tableOfContents/usDeclineCategories.js"></script>
 </head>
@@ -27,51 +27,15 @@
                 <h2 id="category-0">Economic factors</h2>
                 <h3 id="section-0">GDP and share of global GDP</h3>
                 <p>Let's start with a definition: For a nation to be in decline, we have to see important measures be worse today than they were at some point in the past. The kind of metrics that have a real impact on people's lives both at home and abroad.</p>
-
-                <canvas id="myChart" class="chart" height="180"></canvas>
-<script>
-const ctx = document.getElementById('myChart');
-const myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-</script>
-
+                <canvas id="gdp-chart" class="chart" height="180"></canvas>
             </div>
-
         </div>
+
 
     </div>
 </body>
+
+<!-- This loads up all the charts and must be called at the end -->
+<script src="components/charts/us-decline.js"></script>
 
 </html>
