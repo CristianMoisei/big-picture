@@ -25,7 +25,7 @@ a {
 }
 
 .chart {
-  margin: 0 40px;
+  margin: 20px 40px;
 }
 
 #header {
@@ -467,6 +467,12 @@ a {
 .article .category h3 {
   font-size: 24px;
   font-weight: 700;
-  margin-top: 32px;
+  margin-top: 50px;
+}
+
+.article .source, .article .chart-notes {
+  font-size: 14px !important;
+  opacity: 0.6 !important;
+  margin-bottom: 8px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -36,7 +36,6 @@ function generateTableOfContents(categories) {
                 document.write(`<ul class="sub-section">`)
                 for (let c = 0; c < section.subsections.length; c++) {
                     let subsection = section.subsections[c]
-                    console.log(subsection)
                     document.write(`<li onClick="scrollToId('subsection-${c}')">${subsection}</li>`)
                 }
                 document.write(`</ul>`)

@@ -1,9 +1,8 @@
 let categories = [
 
     new Category("1. Economic factors", [      
-        new Section("GDP"), 
-        new Section("Share of global GDP"), 
         new Section("GDP per capita"), 
+        new Section("Share of global GDP"), 
         new Section("National debt"), 
         new Section("Government spending"), 
         new Section("Inflation rate"), 
