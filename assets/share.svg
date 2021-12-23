@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>share</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.600000024">
+        <g id="Group" transform="translate(-19.000000, -19.000000)">
+            <g id="share" transform="translate(19.000000, 19.000000)">
+                <path d="M20,12 L22.6666667,12 C24.139426,12 25.3333333,13.1939073 25.3333333,14.6666667 L25.3333333,25.3333333 C25.3333333,26.8060927 24.139426,28 22.6666667,28 L9.33333333,28 C7.860574,28 6.66666667,26.8060927 6.66666667,25.3333333 L6.66666667,14.6666667 C6.66666667,13.1939073 7.860574,12 9.33333333,12 L12,12" id="Path" stroke="#03161F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <line x1="16" y1="20" x2="16" y2="4" id="Path" stroke="#03161F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                <polyline id="Path" stroke="#03161F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="20 8 16 4 12 8"></polyline>
+                <polygon id="Path" points="0 0 32 0 32 32 0 32"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -3,6 +3,7 @@
 <head>
     <title>Is the United States truly in decline?</title>
     <script src="components/meta.js"></script>
+    <script src="components/chart-js/dist/chart.js"></script>
 </head>
 
 <body>
@@ -13,102 +14,57 @@
         <div class="article">
             <h1>Is the United States truly in decline?</h1>
             <p class="date">Published in January 2022</p>
-            <p>Let's start with a definition: For a nation to be in decline, we have to see important measures be worse today than they were at some point in the past. The kind of metrics that have a real impact on people's lives both at home and abroad.</p>
-            <p>I'd like to look at 41 such measures and give you the tools you need to draw a conclusion about whether The United States is in decline. The destinies of many peoples and countries will be influenced by the stability and prosperity of the US, and now, more than ever, we need the facts. </p>
-            <p class="small">All currency values are adjusted for inflation. <br> The source for any information will be listed below.</p>
+            <img src="assets/covers/1.jpg">
+            <p>There are growing fears that the turbulence the United States is facing is not transitory, and the consequences will be felt far and wide. From the allies who rely on its military might facing increasing risks of losing their autonomy and falling under the influence of other powers, to all the nations who benefit from the global trade network the US championed and continues to protect. Domestically, a period of relative decline would be felt even more, with reduced living standards and increased social tensions.</p>
+            <p>But is the US truly in decline? Let's look at the numbers.</p>
+            <p class="small">All currency values are adjusted for inflation.</p>
             
-            <div class="table-of-contents">
-                <ul>
-                <h4>Economic factors</h4>
-                <li onClick="">GDP and share of global GDP </li>
-                <li onClick="">GDP per capita </li>
-                <li onClick="">National debt </li>
-                <li onClick="">Government spending </li>
-                <li onClick="">Inflation rate </li>
-                <li onClick="">Unemployment </li>
-                <li onClick="">Percentage of people living below the poverty line </li>
-                <li onClick="">Taxes at each bracket </li>
-                <li onClick="">Wage growth </li>
-                <li onClick="">Affordability ratios </li>
-                    <ul class="sub-section">
-                    <li onClick="">Substinence (how much it costs to survive) </li>
-                    <li onClick="">House </li>
-                    <li onClick="">Car </li>
-                    <li onClick="">Vacation </li>
-                    <li onClick="">Healthcare </li>
-                    </ul>
-                <li onClick="">Credit rating </li>
-                <li onClick="">Trade balance </li>
-                </ul>
+            <script src="components/tableOfContents.js"></script>
+            <script>generateTableOfContents()</script>
+            
+            <div class="category">
+                <h2>Economic factors</h2>
+                <h3>GDP and share of global GDP</h3>
+                <p>Let's start with a definition: For a nation to be in decline, we have to see important measures be worse today than they were at some point in the past. The kind of metrics that have a real impact on people's lives both at home and abroad.</p>
 
-                <ul>
-                <h4>Health</h4>
-                <li onClick="">Life expectancy </li>
-                <li onClick="">Percentage of people with mental health issues </li>
-                <li onClick="">Suicide rates </li>
-                <li onClick="">Child mortality rate </li>
-                <li onClick="">Number of doctors </li>
-                <li onClick="">Health expenditure per capita </li>
-                </ul>
-
-                <ul>
-                <h4>Education</h4>
-                <li onClick="">[NCES](https://nces.ed.gov) </li>
-                </ul>
-
-                <ul>
-                <h4>Social factors</h4>
-                <li onClick="">Inequality (GINI coeficient) </li>
-                <li onClick="">Welfare spending </li>
-                <li onClick="">Homelessness rate </li>
-                <li onClick="">Crime rate (violent and non violent) </li>
-                <li onClick="">Racism (institutionalised and normal) </li>
-                </ul>
-
-                <ul>
-                <h4>Infrastructure</h4>
-                <li onClick="">Internet coverage and speeds </li>
-                <li onClick="">Km of highway </li>
-                <li onClick="">Energy sources </li>
-                </ul>
-
-                <ul>
-                <h4>Politics</h4>
-                <li onClick="">Presidential approval ratings </li>
-                <li onClick="">Senate approval ratings </li>
-                <li onClick="">Political donations </li>
-                <li onClick="">Number of countries the US has diplomatic relations with </li>
-                <li onClick="">Perception, trust of Americans </li>
-                </ul>
-
-                <ul>
-                <h4>Demographics</h4>
-                <li onClick="">Birth rate </li>
-                <li onClick="">Median age </li>
-                <li onClick="">Marriage rate </li>
-                <li onClick="">Single parent families </li>
-                <li onClick="">Ratio of old to young people </li>
-                <li onClick="">Church membership </li>
-                <li onClick="">Population </li>
-                <li onClick="">Population density (nationally and for the major cities) </li>
-                </ul>
-
-                <ul>
-                <h4>Military</h4>
-                <li onClick="">Military bases </li>
-                <li onClick="">Any score for military power? </li>
-                <li onClick="">Innovation score? </li>
-                <li onClick="">Military spending </li>
-                <li onClick="">Active personnel </li>
-                </ul>
-
-                <ul>
-                <h4>Business</h4>
-                <li onClick="">Ease of doing business </li>
-                <li onClick="">Number of small businesses </li>
-                <li onClick="">Innovation index </li>
-                <li onClick="">Total private sector valuation </li>
-                </ul>
+                <canvas id="myChart" class="chart" height="180"></canvas>
+<script>
+const ctx = document.getElementById('myChart');
+const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
 
             </div>
 

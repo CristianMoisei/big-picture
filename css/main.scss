@@ -40,6 +40,10 @@ a {
     font-size: 15px;
 }
 
+.chart {
+    margin: 0 40px;
+}
+
 #header {
     display: flex;
     align-items: center;
@@ -297,8 +301,8 @@ a {
 .article {
     background-color: white;
     border-radius: $largeBorderRadius;
-    padding: 40px;
-    max-width: 740px;
+    padding: 50px 0;
+    max-width: 800px;
     margin: 0 auto;
     box-shadow: $lightShadow;
 
@@ -308,10 +312,13 @@ a {
         margin-bottom: 30px;
     }
 
+    h1, h2, h3, h4, h5, h6, p {
+        margin: 0 40px 20px 40px;
+    }
+
     h1 {
         font-size: 48px;
         font-weight: 700;
-        margin-bottom: 20px;
         max-width: 520px;
         opacity: 0.8;
     }
@@ -319,8 +326,12 @@ a {
     p {
         font-size: 18px;
         line-height: 1.6;
-        margin-bottom: 20px;
         opacity: 0.7;
+    }
+
+    img {
+        width: 100%;
+        margin-bottom: 40px;
     }
 
     .small {
@@ -330,9 +341,17 @@ a {
     }
 
     .table-of-contents {
-        padding: 20px;
-        border: rgba($color: $navy, $alpha: 0.1) 1px solid;
-        border-radius: 12px;
+        margin-top: 40px;
+        opacity: 0.8;
+
+        h2 {
+            font-size: 22px;
+            margin-bottom: 28px;
+
+            border-top: 3px solid $navy;
+            padding-top: 12px;
+            font-weight: 900;
+        }
 
         ul {
             padding-bottom: 20px;
@@ -341,14 +360,15 @@ a {
                 font-size: 16px;
                 font-weight: 700;
                 margin-bottom: 12px;
+                cursor: pointer;
             }
             li {
                 font-size: 14px;
-                margin-bottom: 8px;
+                margin: 0 0 8px 55px;
                 cursor: pointer;
             }
 
-            li:hover{
+            h4:hover, li:hover{
                 text-decoration: underline;
                 text-decoration-color: rgba($color: $navy, $alpha: 0.5);
             }
@@ -361,6 +381,26 @@ a {
             &:last-child {
                 padding-bottom: 0;
             }
+        }
+    }
+
+    .category {
+        margin-top: 40px;
+
+        h2 {
+            font-size: 64px;
+            font-weight: 700;
+            opacity: 0.15;
+            // border-top: 8px solid $navy;
+            // padding-top: 12px;
+            // text-transform: uppercase;
+            margin-top: 60px;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 32px;
         }
     }
 }

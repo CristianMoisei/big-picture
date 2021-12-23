@@ -24,6 +24,10 @@ a {
   font-size: 15px;
 }
 
+.chart {
+  margin: 0 40px;
+}
+
 #header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -363,8 +367,8 @@ a {
 .article {
   background-color: white;
   border-radius: 20px;
-  padding: 40px;
-  max-width: 740px;
+  padding: 50px 0;
+  max-width: 800px;
   margin: 0 auto;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(3, 22, 31, 0.05);
           box-shadow: 0px 0px 20px 0px rgba(3, 22, 31, 0.05);
@@ -376,10 +380,13 @@ a {
   margin-bottom: 30px;
 }
 
+.article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article p {
+  margin: 0 40px 20px 40px;
+}
+
 .article h1 {
   font-size: 48px;
   font-weight: 700;
-  margin-bottom: 20px;
   max-width: 520px;
   opacity: 0.8;
 }
@@ -387,8 +394,12 @@ a {
 .article p {
   font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 20px;
   opacity: 0.7;
+}
+
+.article img {
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 .article .small {
@@ -398,9 +409,16 @@ a {
 }
 
 .article .table-of-contents {
-  padding: 20px;
-  border: rgba(2, 21, 31, 0.1) 1px solid;
-  border-radius: 12px;
+  margin-top: 40px;
+  opacity: 0.8;
+}
+
+.article .table-of-contents h2 {
+  font-size: 22px;
+  margin-bottom: 28px;
+  border-top: 3px solid #02151F;
+  padding-top: 12px;
+  font-weight: 900;
 }
 
 .article .table-of-contents ul {
@@ -411,15 +429,16 @@ a {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 12px;
+  cursor: pointer;
 }
 
 .article .table-of-contents ul li {
   font-size: 14px;
-  margin-bottom: 8px;
+  margin: 0 0 8px 55px;
   cursor: pointer;
 }
 
-.article .table-of-contents ul li:hover {
+.article .table-of-contents ul h4:hover, .article .table-of-contents ul li:hover {
   text-decoration: underline;
   -webkit-text-decoration-color: rgba(2, 21, 31, 0.5);
           text-decoration-color: rgba(2, 21, 31, 0.5);
@@ -432,5 +451,22 @@ a {
 
 .article .table-of-contents ul:last-child {
   padding-bottom: 0;
+}
+
+.article .category {
+  margin-top: 40px;
+}
+
+.article .category h2 {
+  font-size: 64px;
+  font-weight: 700;
+  opacity: 0.15;
+  margin-top: 60px;
+}
+
+.article .category h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 32px;
 }
 /*# sourceMappingURL=main.css.map */
