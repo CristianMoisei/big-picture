@@ -4,6 +4,8 @@
     <title>Is the United States truly in decline?</title>
     <script src="components/meta.js"></script>
     <script src="components/chart-js/dist/chart.js"></script>
+    <script src="components/tableOfContents/generator.js"></script>
+    <script src="components/tableOfContents/usDeclineCategories.js"></script>
 </head>
 
 <body>
@@ -19,12 +21,11 @@
             <p>But is the US truly in decline? Let's look at the numbers.</p>
             <p class="small">All currency values are adjusted for inflation.</p>
             
-            <script src="components/tableOfContents.js"></script>
-            <script>generateTableOfContents()</script>
+            <script>generateTableOfContents(categories)</script>
             
             <div class="category">
-                <h2>Economic factors</h2>
-                <h3>GDP and share of global GDP</h3>
+                <h2 id="category-0">Economic factors</h2>
+                <h3 id="section-0">GDP and share of global GDP</h3>
                 <p>Let's start with a definition: For a nation to be in decline, we have to see important measures be worse today than they were at some point in the past. The kind of metrics that have a real impact on people's lives both at home and abroad.</p>
 
                 <canvas id="myChart" class="chart" height="180"></canvas>

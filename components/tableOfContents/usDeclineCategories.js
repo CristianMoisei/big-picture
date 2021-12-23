@@ -1,20 +1,4 @@
-
-
-class Category {
-    constructor(name, sections) {
-        this.name = name;
-        this.sections = sections;
-    }
-}
-
-class Section {
-    constructor(name, subsections) {
-        this.name = name;
-        this.subsections = subsections;
-    }
-}
-
-var categories = [
+let categories = [
 
     new Category("1. Economic factors", [      
         new Section("GDP"), 
@@ -93,41 +77,3 @@ var categories = [
         new Section("Total private sector valuation")    
     ])
 ]
-
-
-function scrollToName(id) {
-    let element = document.getElementById(id);
-    let y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-    window.scrollTo({ top: y, behavior: 'smooth' });
-}
-
-function generateTableOfContents() {
-
-    document.write(`<div class="table-of-contents"><h2>Table of contents</h2>`)
-
-    for (let a = 0; a < categories.length; a++) {
-        let category = categories[a]
-        let categoryId = category.name.replace(/\s/g, '')
-        document.write(`<ul>`)
-        document.write(`<h4 id="${categoryId}">${category.name}</h4>`)
-        for (let b = 0; b < category.sections.length; b++) {
-            let section = category.sections[b]
-            let sectionId = section.name.replace(/\s/g, '')
-            document.write(`<li id="${sectionId}">${section.name}</li>`)
-            if (section.subsections) {
-                document.write(`<ul class="sub-section">`)
-                for (let c = 0; c < section.subsections.length; c++) {
-                    let subsection = section.subsections[c]
-                    let subsectionId = subsection.replace(/\s/g, '')
-                    document.write(`<li id="${subsectionId}">${subsection}</li>`)
-                }
-                document.write(`</ul>`)
-            }
-        }
-        document.write(`</ul>`)
-    }        
-
-    document.write(`</div>`)
-
-}
