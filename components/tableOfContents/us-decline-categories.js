@@ -7,6 +7,7 @@ let categories = [
         new Section("Government spending"), 
         new Section("Inflation rate"), 
         new Section("Unemployment"), 
+        new Section("Labor force participation"), 
         new Section("Percentage of people living below the poverty line"), 
         new Section("Taxes at each bracket"), 
         new Section("Wage growth"),

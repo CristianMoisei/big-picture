@@ -3,12 +3,12 @@
 
 // Colour Variables
 $navy: #02151F;
-$lightBlue: #f1f7fb;
+$lightBlue: #f9fdff;
 $yellow: #f5f50f;
 $grey: #D8D8D8;
 $navHover: rgba($color: #ffffff, $alpha: 0.2);
 $maxWidth: 1000px;
-$largeBorderRadius: 20px;
+$largeBorderRadius: 16px;
 $smallBorderRadius: 8px;
 $mobileBreakpoint: 630px;
 $heavyShadow: 0px 0px 20px 0px rgba(3,22,31,0.1);
@@ -23,9 +23,10 @@ body {
     background-color: $lightBlue;
 }
 
-a {
+a, a:visited {
     cursor: pointer;
     text-decoration: none;
+    color: $navy;
 }
 
 .bold {
@@ -177,7 +178,7 @@ a {
 .article-card {
     border-radius: $largeBorderRadius;
 
-    background: linear-gradient(rgba($color: #03161F, $alpha: 0.6), rgba($color: #03161F, $alpha: 0.6)), url('../assets/covers/1.jpg');
+    background: linear-gradient(to right, rgba($color: #03161F, $alpha: 1), rgba($color: #03161F, $alpha: 0)), url('../assets/covers/1.jpg');
     background-size: cover;
     background-position: center;
     background-color: $navy;
@@ -309,17 +310,18 @@ a {
     .date {
         opacity: 0.3;
         font-size: 16px;
-        margin-bottom: 30px;
+        margin-bottom: 36px;
     }
 
     h1, h2, h3, h4, h5, h6, p {
-        margin: 0 40px 20px 40px;
+        margin: 0 50px 20px 50px;
     }
 
     h1 {
         font-size: 48px;
         font-weight: 700;
-        max-width: 520px;
+        max-width: 560px;
+        display: flex;
         opacity: 0.8;
     }
 
@@ -403,8 +405,13 @@ a {
 
     .source, .chart-notes {
         font-size: 14px !important;
-        opacity: 0.6 !important;
+        opacity: 0.5 !important;
         margin-bottom: 8px;
+        float: right;
+
+        a:hover {
+            text-decoration: underline;
+        }
     }
 
 }

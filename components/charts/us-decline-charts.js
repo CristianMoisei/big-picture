@@ -1,11 +1,16 @@
 // Defaults
-Chart.defaults.elements.line.borderWidth = 3;
 Chart.defaults.backgroundColor = 'rgba(41, 118, 221, 1)';
+Chart.defaults.responsive = true;
+
 Chart.defaults.elements.line.borderColor = 'rgba(41, 118, 221, 1)';
 Chart.defaults.elements.point.radius = 0;
+Chart.defaults.elements.line.borderWidth = 3;
+
 Chart.defaults.plugins.legend.labels.boxWidth = 20;
 Chart.defaults.plugins.legend.align = 'end';
 Chart.defaults.plugins.legend.labels.boxHeight = 1;
+Chart.defaults.plugins.tooltip.mode = 'nearest';
+Chart.defaults.plugins.tooltip.intersect = false;
 
 function range(start, end) {
     if(start === end) return [start];
@@ -13,38 +18,25 @@ function range(start, end) {
 }
 
 let defaultOptions = {
-    plugins: {
-        tooltip: {
-            mode: 'nearest',
-            intersect: false
-        },
-        filler: {
-            propagate: true
-        }
-    },    
-    responsive: true,
     scales: {
-        x: { 
-            grid: { 
-                display:false,
-            } 
-        },
-        y: { 
-            suggestedMax: 14,
-            suggestedMin: 0,
-            // beginAtZero: true,
-            grid: { 
-                borderColor: 'white',
-            } 
-        }
+        x: { grid: { display:false } },
+        y: { suggestedMax: 14, suggestedMin: 0, grid: { borderColor: 'white' } }
     },
-    legend: {
-        labels: {
-            boxWidth: 0
-        }
-    }
+}
 
-
+function generateChart(id, data, type, range, label, options = defaultOptions, height = 180) {
+    let canvas = document.getElementById('id');
+    let chart = new Chart(canvas, {
+        type: type,
+        data: { labels: range, datasets: [{ label: label, data: data }] },
+        options: options
+    });
+    document.write(`<canvas id="`);
+    document.write(id);
+    document.write(`" class="chart" height="`);
+    document.write(height);
+    document.write(`"></canvas>`);
+    
 }
 
 // GDP Chart
@@ -60,14 +52,34 @@ let gdpChart = new Chart(gdpChartCanvas, {
 });
 
 // Unemployment Chart
-let usUnemployment = [3.75, 6.05, 5.21, 3.28, 3.03, 2.93, 5.59, 4.37, 4.13, 4.30, 6.84, 5.45, 5.54, 6.69, 5.57, 5.64, 5.16, 4.51, 3.79, 3.84, 3.56, 3.49, 4.98, 5.95, 5.60, 4.86, 5.64, 8.48, 7.70, 7.05, 6.07, 5.85, 7.18, 7.62, 9.71, 9.60, 7.51, 7.19, 7.00, 6.18, 5.49, 5.26, 5.62, 6.85, 7.49, 6.91, 6.10, 5.59, 5.41, 4.94, 4.50, 4.22, 3.97, 4.74, 5.78, 5.99, 5.54, 5.08, 4.61, 4.62, 5.80, 9.28, 9.61, 8.93, 8.08, 7.36, 6.16, 5.28, 4.88, 4.35, 3.89, 3.68, 8.11, 5.50]
+let usUnemploymentData = [3.75, 6.05, 5.21, 3.28, 3.03, 2.93, 5.59, 4.37, 4.13, 4.30, 6.84, 5.45, 5.54, 6.69, 5.57, 5.64, 5.16, 4.51, 3.79, 3.84, 3.56, 3.49, 4.98, 5.95, 5.60, 4.86, 5.64, 8.48, 7.70, 7.05, 6.07, 5.85, 7.18, 7.62, 9.71, 9.60, 7.51, 7.19, 7.00, 6.18, 5.49, 5.26, 5.62, 6.85, 7.49, 6.91, 6.10, 5.59, 5.41, 4.94, 4.50, 4.22, 3.97, 4.74, 5.78, 5.99, 5.54, 5.08, 4.61, 4.62, 5.80, 9.28, 9.61, 8.93, 8.08, 7.36, 6.16, 5.28, 4.88, 4.36, 3.89, 3.68, 8.09, 5.36]
 let unemploymentChartCanvas = document.getElementById('unemployment');
 let unemploymentChart = new Chart(unemploymentChartCanvas, {
     type: 'line',
     data: {
         labels: range(1948, 2021),
         datasets: [
-            { label: 'Unemployment %', data: usUnemployment } ]
+            { label: 'Unemployment rate', data: usUnemploymentData } ]
     },
     options: defaultOptions
 });
+
+// Labor force participation Chart
+let usLaborForceParticipation = [58.8, 59.0, 59.1, 59.2, 59.0, 58.8, 58.7, 59.2, 59.9, 59.6, 59.4, 59.2, 59.4, 59.3, 58.7, 58.6, 58.7, 58.8, 59.1, 59.5, 59.6, 60.0, 60.3, 60.1, 60.3, 60.7, 61.2, 61.2, 61.5, 62.2, 63.1, 63.6, 63.7, 63.8, 63.9, 64.0, 64.3, 64.8, 65.2, 65.5, 65.9, 66.4, 66.5, 66.1, 66.4, 66.3, 66.5, 66.6, 66.7, 67.1, 67.0, 67.0, 67.0, 66.8, 66.5, 66.2, 65.9, 66.0, 66.1, 66.0, 66.0, 65.4, 64.7, 64.1, 63.7, 63.2, 62.8, 62.6, 62.8, 62.8, 62.8, 63.0, 61.7, 61.6]
+let laborForceParticipationChartCanvas = document.getElementById('labor-force-participation');
+let laborForceParticipationChart = new Chart(laborForceParticipationChartCanvas, {
+    type: 'line',
+    data: {
+        labels: range(1948, 2021),
+        datasets: [
+            { label: 'Labor force participation %', data: usLaborForceParticipation } ]
+    },
+    options: {
+        scales: {
+            x: { grid: { display: false } },
+            y: { suggestedMin: 40, grid: { borderColor: 'white' } }
+        },
+    }
+});
+
+laborForceParticipationChart.options.scales.y.suggestedMin = 40;

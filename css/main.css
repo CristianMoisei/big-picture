@@ -4,12 +4,13 @@
 }
 
 body {
-  background-color: #f1f7fb;
+  background-color: #f9fdff;
 }
 
-a {
+a, a:visited {
   cursor: pointer;
   text-decoration: none;
+  color: #02151F;
 }
 
 .bold {
@@ -212,9 +213,9 @@ a {
 }
 
 .article-card {
-  border-radius: 20px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 22, 31, 0.6)), to(rgba(3, 22, 31, 0.6))), url("../assets/covers/1.jpg");
-  background: linear-gradient(rgba(3, 22, 31, 0.6), rgba(3, 22, 31, 0.6)), url("../assets/covers/1.jpg");
+  border-radius: 16px;
+  background: -webkit-gradient(linear, left top, right top, from(#03161f), to(rgba(3, 22, 31, 0))), url("../assets/covers/1.jpg");
+  background: linear-gradient(to right, #03161f, rgba(3, 22, 31, 0)), url("../assets/covers/1.jpg");
   background-size: cover;
   background-position: center;
   background-color: #02151F;
@@ -320,7 +321,7 @@ a {
 }
 
 .about-card {
-  border-radius: 20px;
+  border-radius: 16px;
   background-color: rgba(2, 21, 31, 0.07);
   padding: 30px 0 30px 60px;
   display: -webkit-box;
@@ -366,7 +367,7 @@ a {
 
 .article {
   background-color: white;
-  border-radius: 20px;
+  border-radius: 16px;
   padding: 50px 0;
   max-width: 800px;
   margin: 0 auto;
@@ -377,17 +378,20 @@ a {
 .article .date {
   opacity: 0.3;
   font-size: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 
 .article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article p {
-  margin: 0 40px 20px 40px;
+  margin: 0 50px 20px 50px;
 }
 
 .article h1 {
   font-size: 48px;
   font-weight: 700;
-  max-width: 520px;
+  max-width: 560px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   opacity: 0.8;
 }
 
@@ -472,7 +476,12 @@ a {
 
 .article .source, .article .chart-notes {
   font-size: 14px !important;
-  opacity: 0.6 !important;
+  opacity: 0.5 !important;
   margin-bottom: 8px;
+  float: right;
+}
+
+.article .source a:hover, .article .chart-notes a:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=main.css.map */
