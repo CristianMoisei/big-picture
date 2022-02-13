@@ -1,0 +1,76 @@
+@import "../variables.scss";
+
+#header {
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    color: white;
+    background-color: $navy;
+
+    #header-container {
+        width: 100%;    
+        max-width: $maxWidth;
+        margin: 0 auto;
+
+        div {
+            h1 {
+                font-size: 44px;
+                line-height: 1.2;
+                margin-bottom: 16px;
+                font-family: 'Merriweather', serif !important;
+            }
+    
+            p {
+                font-size: 17px;
+                line-height: 1.4;
+                opacity: 0.6;
+                max-width: 600px;
+                font-family: 'Lato', sans-serif !important;
+            }    
+        }
+    }
+
+}
+
+#articles {
+    max-width: $maxWidth;
+    margin: 50px auto 0 auto;
+}
+
+.article {
+    color: $navy;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Merriweather', serif !important;
+    border-radius: $smallBorderRadius;
+    transition: all .5s ease;
+    overflow: hidden;
+    background-color: rgba($color: $navy, $alpha: 0.05);
+
+    &:hover {
+        background-color: rgba($color: $navy, $alpha: 0.1);
+
+        & > #cover img {
+            transform: scale(1.1);
+        }
+    }
+
+    .article-title {
+        margin-left: 60px;
+    }
+
+    #cover {
+        width: 400px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 0 $smallBorderRadius $smallBorderRadius 0;
+        z-index: 1;
+
+        img {
+            height: 100%;
+            transition: transform .5s ease;
+        }
+    }
+    
+}

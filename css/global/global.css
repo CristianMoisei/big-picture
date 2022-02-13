@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:wght@400;700&display=swap");
+::-moz-selection {
+  color: black;
+  background: #2976dd;
+}
+::selection {
+  color: black;
+  background: #2976dd;
+}
+
+a, a:visited {
+  cursor: pointer;
+  text-decoration: none;
+  color: #111A1E;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+#logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 12px 20px 12px 16px;
+  margin-bottom: 50px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+.article-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-family: 'Merriweather', serif !important;
+}
+
+.article-title h3 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  max-width: 440px;
+}
+
+.article-title .article-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  opacity: 0.7;
+}
+
+.article-title .article-meta span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+
+.article-title .article-meta span img {
+  margin-right: 8px;
+}
+
+.article-title .article-meta span p {
+  font-size: 15px;
+  font-weight: 700;
+}
+/*# sourceMappingURL=global.css.map */

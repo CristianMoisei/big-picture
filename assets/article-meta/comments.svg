@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>comments</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-793.000000, -580.000000)">
+            <g id="comments" transform="translate(793.000000, 580.000000)">
+                <path d="M12,4 C7.03,4 3,7.35868 3,11.4971 C3.07512522,13.9943776 4.45240129,16.269983 6.63,17.49477 C6.41369346,18.0825871 6.11291577,18.6357612 5.73714,19.13687 C5.52973402,19.4396897 5.53486397,19.840145 5.74995903,20.1375523 C5.96505409,20.4349597 6.34376295,20.5652301 6.6963,20.46308 C7.89862877,20.1130293 9.03031186,19.5549857 10.04,18.81427 C10.6862684,18.935411 11.3424775,18.9956483 12,18.99419 C16.97,18.99419 21,15.63551 21,11.4971 C21,7.35869 16.97,4 12,4 Z" id="Path" stroke="#111A1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <line x1="9" y1="10" x2="15" y2="10" id="Path" stroke="#111A1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="9" y1="13" x2="12" y2="13" id="Path" stroke="#111A1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></line>
+                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

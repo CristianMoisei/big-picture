@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>author</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-618.000000, -580.000000)">
+            <g id="author" transform="translate(618.000000, 580.000000)">
+                <path d="M20,20 L20,19.25 C20,16.9027898 18.0972102,15 15.75,15 L8.25,15 C5.90278981,15 4,16.9027898 4,19.25 L4,20" id="Path" stroke="#111A1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle id="Oval" stroke="#111A1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="7" r="4"></circle>
+                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

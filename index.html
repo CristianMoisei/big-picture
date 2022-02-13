@@ -1,36 +1,37 @@
 <html>
-    
 <head>
     <title>Analysis Bureau</title>
+    <link rel="stylesheet" href="css/home/home.css">
     <script src="components/meta.js"></script>
 </head>
 
 <body>
-    <script src="components/header.js"></script>
+    <div id="header">
+        <div id="header-container">
+            <img id="logo" src="assets/white-logo.svg">
 
-    <div id="content">
-        <div class="article-card">
-            <div id="text">
-                <p class="date">Published in January 2022</p>
-                <h3>Is the United States truly in decline?</h3>
-                <p class="tagline">An impartial look at the key indicators and the story they tell</p>
-                <div class="cta" onclick="location.href = 'us-decline.html';">
-                    <a>Read</a>
-                    <img src="assets/chevron.svg">
-                </div>        
-            </div>
-        </div>
-
-        <div class="about-card">
             <div>
-                <h4>What's this site about?</h4>
-                <p>It seems to me that it's getting harder and harder to know which news sources to trust or even to know what's real and what isn't. My goal with this website is to look at the <span class="bold">raw data</span> and give you the chance to <span class="bold">draw your own conclusions</span> about some of the most important issues of our time.</p>
-                <br>
-                <p>My name is Cristian Moisei and I'm glad you stopped by.</p>
+                <h1>The numbers behind the story</h1>
+                <p>In depth analyses of the facts behind some of the most pressing issues in the world today + an invitation to join the conversation.</p>
             </div>
-            <img src="assets/large-cropped-logo.svg">
         </div>
+    </div>
 
+    <div class="content" id="articles">
+        <a href="us-decline.html">
+            <div class="article">
+                <div class="article-title">
+                    <h3>Is the United States truly in decline?</h3>
+                    <div class="article-meta">
+                        <span><img src="assets/article-meta/read-time.svg"><p>~20m read</p></span>
+                        <span><img src="assets/article-meta/publish-date.svg"><p>March 2022</p></span>
+                        <span><img src="assets/article-meta/author.svg"><p>Cristian Moisei</p></span>
+                        <span><img src="assets/article-meta/comments.svg"><p>18 comments</p></span>
+                    </div>
+                </div>
+                <div id="cover"><img src="assets/covers/1.jpg"></div>
+            </div>
+        </a>
 
     </div>
 </body>
