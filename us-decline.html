@@ -4,20 +4,23 @@
     <title>Is the United States truly in decline?</title>
     <link rel="stylesheet" href="css/article/article.css">
 
-    <script src="components/meta.js"></script>
-    <script src="components/scrollToSection.js"></script>
-    <!-- <script src="components/tableOfContents/us-decline-categories.js"></script> -->
+    <script src="scripts/meta.js"></script>
+    <script src="scripts/scrollToSection.js"></script>
+    <script src="scripts/charts-library.js"></script>
+    <script src="scripts/renderChart.js"></script>
+    <script src="scripts/SegmentedControl.js"></script>
 </head>
 
 <body>
-    
-    <div id="header">
-        <a href="index.html"><img id="logo" src="assets/white-logo.svg"></a>
-    </div>
-
     <div class="article">
+        <div id="header">
+            <a href="index.html"><img id="back" src="assets/back.svg"></a>
+            <img id="logo" src="assets/logo-navy.svg">
+        </div>
+    
+
         <div class="article-title">
-            <h3>Is the United States truly in decline?</h3>
+            <h1>Is the United States truly in decline?</h1>
             <div class="article-meta">
                 <span><img src="assets/article-meta/read-time.svg"><p>~20m read</p></span>
                 <span><img src="assets/article-meta/publish-date.svg"><p>March 2022</p></span>
@@ -29,63 +32,41 @@
         <p>There are growing fears that the turbulence the United States is facing is not transitory, and the consequences will be felt far and wide. From the allies who rely on its military might facing increasing risks of losing their autonomy and falling under the influence of other powers, to all the nations who benefit from the global trade network the US championed and continues to protect. Domestically, a period of relative decline would be felt even more, with reduced living standards and increased social tensions.</p>
         <p>But is the US truly in decline? Let's look at the numbers.</p>
         <!-- <p class="small">All currency values are adjusted for inflation.</p> -->
-        
-        <!-- <script>generateTableOfContents(categories)</script> -->
-        
+                
         <div class="table-of-contents">
             <h2>Table of contents</h2>
+            <ol>
+                <h4 onClick="scrollToSection(this.innerHTML)">Global factors</h4>
+                <li onClick="scrollToSection(this.innerHTML)">Share of global GDP</li> <!-- New Maddison Project Database and World Bank -->
+                <li onClick="scrollToSection(this.innerHTML)">Credit rating</li>
+                <li onClick="scrollToSection(this.innerHTML)">Balance of trade</li> <!-- Trade deficit, IMF has data on this -->
+                <li onClick="scrollToSection(this.innerHTML)">National debt</li> <!-- Make sure to explain that debt is not necessarily a bad thing and to look at returns if that data is available. -->
+                <li onClick="scrollToSection(this.innerHTML)">Trust in Americans</li> <!-- PEW? -->
+                <li onClick="scrollToSection(this.innerHTML)">Military power</li> <!-- https://www.globalfirepower.com -->
+                <li onClick="scrollToSection(this.innerHTML)">Foreign direct investmen</li> <!-- Include one chart for investment made and one for investment received -->
 
-            <ul>
-                <li onClick="scrollToSection(this.innerHTML)">Unemployment</li>
-                <li onClick="scrollToSection(this.innerHTML)">Poverty rate</li>
-                <li onClick="scrollToSection(this.innerHTML)">A</li>
-            </ul>
-        
-
-
-
-
-
-
+                <h4>Domestic factors</h4>
+                <!-- Household savings -->
+            </ol>
         </div>
 
-        <div class="category">
-            <h2 id="category-0">Domestic factors</h2>
-            <!-- <h3 id="section-0">GDP per capita</h3>
-            <p>GDP by itself is not the most adequate measure for a nation's prosperity. One of the criticisms is that it doesn't account for population growth. For example if, in a given period, GDP grew by 2% but the population grew by 5%, everyone will be worse off (assuming all other factors such as the balance of trade stay the same). There is also a lot of talk about China's economy soon overtaking the US, but China has 4.2x the population. GDP per capita doesn't account for wealth distribution (which we'll look at later), but it does at least account for changes in population.</p>
-            <canvas id="gdp-per-capita" class="chart" height="180"></canvas>
-            <p class="source">Sources: World Bank, Maddison Report, US Bureau of Labor Statistics</p>
-            <p class="chart-notes">Values from the Maddison Report 2020 were originally adjusted to 2011 dollars, whereas the World Bank data uses nominal values. All values were adjusted to the USD in January 2021</p> -->
+        <h3 class="section-title">Global factors</h3>
+        <h3>Share of global GDP</h3>
+        <!-- Mention the peak from the most reliable source I can find, http://ghdx.healthdata.org/record/statistics-world-population-gdp-and-capita-gdp-1-2008-ad -->
+        <!-- The data for the EU countries reffers to the cummulative historical GDP for the 27 states that comprise the EU in 2022 -->
+        <!-- The data for China does not include Hong Kong -->
+        <!-- Why does this matter? -->
+        <p>While the uneployment rate climbed sharply during the early days of the pandemic, the recovery was also relatively swift, with the number sitting at <span class="bold">3.9% in December 2021</span> and an average of 5.36% for all of 2021. More importantly, the unemployment rate has always fluctuated historically and this doesn't point to broad signs of decline.</p>
 
-            <!-- <h3 id="section-1">Share of global GDP</h3>
-            <p>GDP by itself is not the most adequate measure for a nation's prosperity. One of the criticisms is that it doesn't account for population growth. For example if, in a given period, GDP grew by 2% but the population grew by 5%, everyone will be worse off (assuming all other factors such as the balance of trade stay the same). There is also a lot of talk about China's economy soon overtaking the US, but China has 4.2x the population. GDP per capita doesn't account for wealth distribution (which we'll look at later), but it does at least account for changes in population.</p>
-            <canvas id="gdp-per-capita" class="chart" height="180"></canvas>
-            <p class="source">Sources: World Bank, Maddison Report, US Bureau of Labor Statistics</p>
-            <p class="chart-notes">Values from the Maddison Report 2020 were originally adjusted to 2011 dollars, whereas the World Bank data uses nominal values. All values were adjusted to the USD in January 2021</p> -->
-
-            <h3>Unemployment</h3>
-            <p>While the uneployment rate climbed sharply during the early days of the pandemic, the recovery was also relatively swift, with the number sitting at <span class="bold">3.9% in December 2021</span> and an average of 5.36% for all of 2021. More importantly, the unemployment rate has always fluctuated historically and this doesn't point to broad signs of decline.</p>
-            <canvas id="unemployment" class="chart" height="180"></canvas>
-            <p class="source"><a target = "_blank" href ="https://data.bls.gov/cgi-bin/surveymost?bls">Sources: US Bureau of Labor Statistics</a></p>
-
-            <h3>Poverty rate</h3>
-            <p>While the uneployment rate climbed sharply during the early days of the pandemic, the recovery was also relatively swift, with the number sitting at <span class="bold">3.9% in December 2021</span> and an average of 5.36% for all of 2021. More importantly, the unemployment rate has always fluctuated historically and this doesn't point to broad signs of decline.</p>
-            <iframe title="[ Insert title here ]" aria-label="Interactive line chart" id="datawrapper-chart-mX7n2" src="https://datawrapper.dwcdn.net/mX7n2/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-            <!-- <canvas id="unemployment" class="chart" height="180"></canvas> -->
-            <p class="source"><a target = "_blank" href ="https://data.bls.gov/cgi-bin/surveymost?bls">Sources: US Bureau of Labor Statistics</a></p>
-
-
-            <!-- <h3 id="section-6">Labor force participation</h3>
-            <p>This is the percentage of people 16 or older who are either employed or looking for work. A higher participation rate means that more people are employed in the formal economy.</p>
-            <canvas id="labor-force-participation" class="chart" height="180"></canvas>
-            <p class="source">Sources: US Bureau of Labor Statistics</p> -->
-        </div>
+        <script>renderSegmentedControl([["nPN1C", "Trend"], ["yIjCj", "1960"], ["eh42A", "2020"]])</script>
+        <script>renderChart("nPN1C")</script>
+        <script>renderChart("yIjCj", true)</script>
+        <script>renderChart("eh42A", true)</script>    
     </div>
 
 </body>
 
 <!-- This loads up all the charts and must be called at the end -->
-<script src="components/charts/us-decline-charts.js"></script>
+<script src="scripts/charts/us-decline-charts.js"></script>
 
 </html>

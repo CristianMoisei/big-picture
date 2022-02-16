@@ -1,13 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:wght@400;700&display=swap");
-::-moz-selection {
-  color: black;
-  background: #2976dd;
-}
-::selection {
-  color: black;
-  background: #2976dd;
-}
-
 a, a:visited {
   cursor: pointer;
   text-decoration: none;
@@ -50,7 +41,7 @@ a, a:visited {
   font-family: 'Merriweather', serif !important;
 }
 
-.article-title h3 {
+.article-title h1 {
   font-size: 44px;
   font-weight: 700;
   line-height: 1.2;
@@ -66,7 +57,7 @@ a, a:visited {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .article-title .article-meta span {
@@ -90,5 +81,7 @@ a, a:visited {
 .article-title .article-meta span p {
   font-size: 15px;
   font-weight: 700;
+  opacity: 1 !important;
+  margin-bottom: 0 !important;
 }
 /*# sourceMappingURL=global.css.map */

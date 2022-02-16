@@ -2,17 +2,24 @@
 
 #header {
     display: flex;
-    padding-top: 80px;
-    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    justify-content: center;
+
     color: white;
     background-color: $navy;
 
     #header-container {
-        width: 100%;    
-        max-width: $maxWidth;
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
 
         div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
             h1 {
                 font-size: 44px;
                 line-height: 1.2;
@@ -43,7 +50,7 @@
     flex-direction: row;
     justify-content: space-between;
     font-family: 'Merriweather', serif !important;
-    border-radius: $smallBorderRadius;
+    border-radius: $largeBorderRadius;
     transition: all .5s ease;
     overflow: hidden;
     background-color: rgba($color: $navy, $alpha: 0.05);
@@ -61,10 +68,10 @@
     }
 
     #cover {
-        width: 400px;
-        height: 300px;
+        width: 350px;
+        height: 260px;
         overflow: hidden;
-        border-radius: 0 $smallBorderRadius $smallBorderRadius 0;
+        border-radius: 0 $largeBorderRadius $largeBorderRadius 0;
         z-index: 1;
 
         img {
