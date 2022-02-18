@@ -37,33 +37,103 @@
             <h2>Table of contents</h2>
             <ol>
                 <h4 onClick="scrollToSection(this.innerHTML)">Global factors</h4>
+                
                 <li onClick="scrollToSection(this.innerHTML)">Share of global GDP</li> <!-- New Maddison Project Database and World Bank -->
-                <li onClick="scrollToSection(this.innerHTML)">Credit rating</li>
                 <li onClick="scrollToSection(this.innerHTML)">Balance of trade</li> <!-- Trade deficit, IMF has data on this -->
-                <li onClick="scrollToSection(this.innerHTML)">National debt</li> <!-- Make sure to explain that debt is not necessarily a bad thing and to look at returns if that data is available. -->
+                <li onClick="scrollToSection(this.innerHTML)">Credit rating</li>
+                <li onClick="scrollToSection(this.innerHTML)">National debt</li> <!-- Make sure to explain that debt is not necessarily a bad thing and to look at returns if that data is available. Also include: It also made it easier China, Japan, Switzerland, Russia and Saudi Arabia to hold $6.7 trillion in foreign currency (source: IMF)-->
                 <li onClick="scrollToSection(this.innerHTML)">Trust in Americans</li> <!-- PEW? -->
                 <li onClick="scrollToSection(this.innerHTML)">Military power</li> <!-- https://www.globalfirepower.com -->
                 <li onClick="scrollToSection(this.innerHTML)">Foreign direct investmen</li> <!-- Include one chart for investment made and one for investment received -->
 
                 <h4>Domestic factors</h4>
                 <!-- Household savings -->
+                <!-- GDP is one of the most well known and monitored metrics, but it can be very misleading. For example it doesn't account for the size of the population. What about GDP per capita then? That assumes a perfectly even distribution of wealth, which is again, not realistic. That's why we'll look at GINI -->
+                <!-- The United States' GDP per capita bla bla, let's look at GINI -->
+
             </ol>
         </div>
 
         <h3 class="section-title">Global factors</h3>
+
         <h3>Share of global GDP</h3>
-        <!-- Mention the peak from the most reliable source I can find, http://ghdx.healthdata.org/record/statistics-world-population-gdp-and-capita-gdp-1-2008-ad -->
-        <!-- The data for the EU countries reffers to the cummulative historical GDP for the 27 states that comprise the EU in 2022 -->
-        <!-- The data for China does not include Hong Kong -->
-        <!-- Why does this matter? -->
-        <p>While the uneployment rate climbed sharply during the early days of the pandemic, the recovery was also relatively swift, with the number sitting at <span class="bold">3.9% in December 2021</span> and an average of 5.36% for all of 2021. More importantly, the unemployment rate has always fluctuated historically and this doesn't point to broad signs of decline.</p>
+        <p>At the end of the Second World War, the United States was the only advanced economy left standing, with the rest of the world either torn down by war or lacking the production capabilities to be a serious challenge. This gave Americans unprecedented economic power, the opportunity to benefit from the reconstruction of the world and a leading role in deciding the future of the global financial system.</p>
+        <p>According to British economist Paul Kennedy, the relative economic power of the United States is precisely the reason it enjoyed all these benefits. In his book, The Rise and Fall of the Great Powers, Kennedy argues that the bigger the share of global GDP a nation has, the easier it will be for them to, achieve their global goals without overstretching their military and resources, while on the other hand investing at home and maintaining prosperity.</p>
+        <p>Today, not only is the US' share of global GDP decreasing, but the share of nations like China, whose interests often clash with American ones, is rapidly increasing.</p>
 
         <script>renderSegmentedControl([["nPN1C", "Trend"], ["yIjCj", "1960"], ["eh42A", "2020"]])</script>
         <script>renderChart("nPN1C")</script>
         <script>renderChart("yIjCj", true)</script>
         <script>renderChart("eh42A", true)</script>    
+
+        <h3>Balance of trade</h3>
+        <p>As the American share of global GDP is decreasing, the gap between exports and imports is increasing. On one hand, this could be regarded as a positive: from 1971, the nation was no longer hindered by the limitations of the Bretton Woods system and the gold standard, so it became free to leverage and expand its comparative advantage for services and grow even wealthier in the process. At the same time, this resulted in stagnant wages for the middle class, the reduction of domestic manufacturing and increased inequality.</p>        
+
+        <script>renderChart("tGddr")</script>
+
+        <div class="spacer"></div>
+        <p>The landscape of global trade and its players are changing also. The value of total exports grew from $382.6 billion in 1970, to $22 trillion in 2020. After joining the WTO, China's exports grew from 0.6% of all exports in 1970 to 12% in 2020. In the same period, the US went from 15% of all exports in 1970 to 9% in 2020.</p>
+
+        <table>
+            <tr class="bold">
+                <td>Percentage of global exports</td>
+                <td class="narrow-row">1970</td>
+                <td class="narrow-row">2020</td> 
+            </tr>
+            <!-- <tr>
+                <td>EU countries</td>
+                <td>$132 billion (34%)</td> 
+                <td>$7.13 trillion (31%)</td> 
+            </tr> -->
+            <tr>
+                <td>China</td>
+                <td class="narrow-row">0.6%</td> 
+                <td class="narrow-row">12.1%</td> 
+                <!-- <td>0.6% or $2.3 billion</td> 
+                <td>12.1% or $2.72 trillion</td>  -->
+            </tr>
+            <tr>
+                <td>US</td>
+                <td class="narrow-row">15.6%</td> 
+                <td class="narrow-row">9.5%</td> 
+                <!-- <td>15.6% or $59.7 billion</td> 
+                <td>9.5% or $2.12 trillion</td>  -->
+            </tr>
+            <tr>
+                <td>Germany</td>
+                <td class="narrow-row">8.5%</td> 
+                <td class="narrow-row">7.4%</td> 
+                <!-- <td>8.5% or $32.7 billion</td> 
+                <td>7.4% or $1.67 trillion</td>  -->
+            </tr>
+            <tr>
+                <td>France</td>
+                <!-- <td>6.2% or $23.7 billion</td> 
+                <td>3.3% or $733.2 billion</td>  -->
+                <td class="narrow-row">6.2%</td> 
+                <td class="narrow-row">3.3%</td> 
+            </tr>
+            <tr>
+                <td>Japan</td>
+                <!-- <td>5.8% or $22 billion</td> 
+                <td>3.5% or $785 billion</td>  -->
+                <td class="narrow-row">5.8%</td> 
+                <td class="narrow-row">3.5%</td>
+            </tr>
+        </table>
+        <p class="source"><span>Source: </span><a href="https://data.worldbank.org/indicator/NE.EXP.GNFS.CD">World Bank</a></p>
+
+        <h3>Credit rating</h3>
+        <p>Explain what this is</p>        
+
     </div>
 
+    <!-- Conclusion for global factors. none of these by themselves is enough to do any damage, but together they exert a lot of economic pressure and make it harder for the US to achieve its goals -->
+    <!-- General conclusion: at the end: a lot of indicators do point to the US being in decline. What does the future hold? Several options -->
+    <!-- Footnotes: 
+        - EU Countries refer to the 27 member states as of 2022
+        - Data for China does not include Hong Kong or Taiwan
+    -->
 </body>
 
 <!-- This loads up all the charts and must be called at the end -->
