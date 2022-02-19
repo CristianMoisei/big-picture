@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-$articleWidth: 700;
+$articleWidth: 700px;
 
 body {
     background-color: $navy;
@@ -13,6 +13,10 @@ body {
     align-items: center;
     max-width: $articleWidth + 100;
     margin-bottom: 80px;
+
+    @media screen and (max-width: $articleWidth) {
+        margin-bottom: 60px;
+    }
 
     #logo {
         margin: 0;
@@ -35,6 +39,12 @@ body {
     margin: 30px auto 40px auto;
     padding: 50px;
 
+    @media screen and (max-width: $articleWidth) {
+        margin: 0;
+        border-radius: 0;
+        padding: 30px;
+    }
+
     .article-title {
         margin-bottom: 40px;
 
@@ -42,6 +52,17 @@ body {
             max-width: 100% !important;
             margin-right: 200px;
         }
+    }
+
+    ul {
+        li {
+            padding: 0;
+            margin-left: 30px;
+        }
+    }
+
+    a {
+        text-decoration: underline;
     }
 
     iframe {
@@ -54,14 +75,18 @@ body {
         font-weight: 700;
         opacity: 0.2;
         margin-top: 60px;
-        margin-bottom: -20px;
+        margin-bottom: -30px;
         font-family: 'Merriweather', serif !important;
+
+        @media screen and (max-width: $articleWidth) {
+            font-size: 40px;
+        }
     }
 
     h3 {
-        font-size: 24px;
+        font-size: 26px;
         font-weight: 700;
-        margin: 60px 0 16px 0;
+        margin: 70px 0 16px 0;
     }
 
 
@@ -88,6 +113,37 @@ body {
             & + :nth-child(even) {
                 background-color: rgba($color: $navy, $alpha: 0.07);
             }
+        }
+    }
+
+    .engagements {
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        h4 {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .engagement {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+    
+            padding: 16px 20px;
+            border-radius: $largeBorderRadius;
+
+            p {
+                font-size: 15px;
+            }
+
+            margin-bottom: 12px;
+        }
+        .green {
+            background-color: $green;
         }
     }
 
@@ -131,11 +187,19 @@ body {
                 margin-bottom: 12px;
                 margin-top: 16px;
                 cursor: pointer;
+                @media screen and (max-width: $articleWidth) {
+                    margin-bottom: 20px;
+                }
             }
             li {
                 font-size: 14px;
                 margin: 0 0 8px 36px;
                 cursor: pointer;
+
+                @media screen and (max-width: $articleWidth) {
+                    margin: 0 0 16px 36px;
+                    font-size: 15px;
+                }
             }
 
             h4:hover, li:hover{

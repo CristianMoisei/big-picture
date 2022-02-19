@@ -12,6 +12,13 @@
   background-color: #111A1E;
 }
 
+@media screen and (max-width: 800px) {
+  #header {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+}
+
 #header #header-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,6 +31,7 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  padding: 0 30px;
 }
 
 #header #header-container div {
@@ -46,6 +54,12 @@
   font-family: 'Merriweather', serif !important;
 }
 
+@media screen and (max-width: 800px) {
+  #header #header-container div h1 {
+    font-size: 36px;
+  }
+}
+
 #header #header-container div p {
   font-size: 17px;
   line-height: 1.4;
@@ -54,9 +68,21 @@
   font-family: 'Lato', sans-serif !important;
 }
 
+@media screen and (max-width: 800px) {
+  #header #header-container div p {
+    font-size: 16px;
+  }
+}
+
 #articles {
   max-width: 1040px;
   margin: 50px auto 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+  #articles {
+    margin: 30px auto;
+  }
 }
 
 .article {
@@ -79,17 +105,38 @@
   background-color: rgba(17, 26, 30, 0.05);
 }
 
-.article:hover {
-  background-color: rgba(17, 26, 30, 0.1);
+@media screen and (max-width: 800px) {
+  .article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin: 0 20px;
+  }
 }
 
-.article:hover > #cover img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+@media screen and (min-width: 800px) {
+  .article:hover {
+    background-color: rgba(17, 26, 30, 0.1);
+  }
+  .article:hover > #cover img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 
 .article .article-title {
   margin-left: 60px;
+}
+
+@media screen and (max-width: 800px) {
+  .article .article-title {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .article .article-title h1 {
+    font-size: 30px;
+  }
 }
 
 .article #cover {
@@ -100,11 +147,26 @@
   z-index: 1;
 }
 
+@media screen and (max-width: 800px) {
+  .article #cover {
+    width: 100%;
+    height: 200px;
+    border-radius: 0;
+  }
+}
+
 .article #cover img {
   height: 100%;
   -webkit-transition: -webkit-transform .5s ease;
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
   transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+@media screen and (max-width: 800px) {
+  .article #cover img {
+    width: 100%;
+    height: initial;
+  }
 }
 /*# sourceMappingURL=home.css.map */

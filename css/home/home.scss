@@ -9,11 +9,17 @@
     color: white;
     background-color: $navy;
 
+    @media screen and (max-width: $maxWidth) {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+
     #header-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 0 30px;
 
         div {
             display: flex;
@@ -25,6 +31,10 @@
                 line-height: 1.2;
                 margin-bottom: 16px;
                 font-family: 'Merriweather', serif !important;
+
+                @media screen and (max-width: $maxWidth) {
+                    font-size: 36px;
+                }
             }
     
             p {
@@ -33,6 +43,10 @@
                 opacity: 0.6;
                 max-width: 600px;
                 font-family: 'Lato', sans-serif !important;
+
+                @media screen and (max-width: $maxWidth) {
+                    font-size: 16px;
+                }
             }    
         }
     }
@@ -40,8 +54,12 @@
 }
 
 #articles {
-    max-width: $maxWidth;
+    max-width: 1040px;
     margin: 50px auto 0 auto;
+
+    @media screen and (max-width: $maxWidth) {
+        margin: 30px auto;
+    }
 }
 
 .article {
@@ -55,16 +73,32 @@
     overflow: hidden;
     background-color: rgba($color: $navy, $alpha: 0.05);
 
-    &:hover {
-        background-color: rgba($color: $navy, $alpha: 0.1);
+    @media screen and (max-width: $maxWidth) {
+        flex-direction: column-reverse;
+        margin: 0 20px;
+    }
 
-        & > #cover img {
-            transform: scale(1.1);
+    @media screen and (min-width: $maxWidth) {
+        &:hover {
+            background-color: rgba($color: $navy, $alpha: 0.1);
+    
+            & > #cover img {
+                transform: scale(1.1);
+            }
         }
     }
 
     .article-title {
         margin-left: 60px;
+
+        @media screen and (max-width: $maxWidth) {
+            margin-left: 0;
+            padding: 20px;
+            
+            h1 {
+                font-size: 30px;
+            }
+        }    
     }
 
     #cover {
@@ -74,9 +108,20 @@
         border-radius: 0 $largeBorderRadius $largeBorderRadius 0;
         z-index: 1;
 
+        @media screen and (max-width: $maxWidth) {
+            width: 100%;
+            height: 200px;
+            border-radius: 0;
+        }
+
         img {
             height: 100%;
             transition: transform .5s ease;
+
+            @media screen and (max-width: $maxWidth) {
+                width: 100%;
+                height: initial;
+            }    
         }
     }
     

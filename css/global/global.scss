@@ -42,6 +42,14 @@ a, a:visited {
         flex-direction: row;
         opacity: 0.6;
 
+        @media screen and (max-width: $maxWidth) {
+            flex-direction: column;
+
+            span {
+                margin-bottom: 6px;
+            }
+        }
+
         span {
             display: flex;
             flex-direction: row;

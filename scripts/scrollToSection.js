@@ -3,7 +3,7 @@ function scrollToSection(content) {
 
     for (var i = 0; i < titles.length; i++) {
         if (titles[i].innerHTML == content) {
-            let y = titles[i].getBoundingClientRect().top + window.pageYOffset;
+            const y = titles[i].getBoundingClientRect().top + window.pageYOffset - 40;
             window.scrollTo({ top: y });
             break;
         }

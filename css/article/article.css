@@ -14,8 +14,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 800;
+  max-width: 800px;
   margin-bottom: 80px;
+}
+
+@media screen and (max-width: 700px) {
+  #header {
+    margin-bottom: 60px;
+  }
 }
 
 #header #logo {
@@ -34,9 +40,17 @@ body {
 .article {
   background-color: white;
   border-radius: 16px;
-  max-width: 700;
+  max-width: 700px;
   margin: 30px auto 40px auto;
   padding: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  .article {
+    margin: 0;
+    border-radius: 0;
+    padding: 30px;
+  }
 }
 
 .article .article-title {
@@ -46,6 +60,15 @@ body {
 .article .article-title h3 {
   max-width: 100% !important;
   margin-right: 200px;
+}
+
+.article ul li {
+  padding: 0;
+  margin-left: 30px;
+}
+
+.article a {
+  text-decoration: underline;
 }
 
 .article iframe {
@@ -58,14 +81,20 @@ body {
   font-weight: 700;
   opacity: 0.2;
   margin-top: 60px;
-  margin-bottom: -20px;
+  margin-bottom: -30px;
   font-family: 'Merriweather', serif !important;
 }
 
+@media screen and (max-width: 700px) {
+  .article .section-title {
+    font-size: 40px;
+  }
+}
+
 .article h3 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
-  margin: 60px 0 16px 0;
+  margin: 70px 0 16px 0;
 }
 
 .article p {
@@ -90,6 +119,43 @@ body {
 
 .article table tr + :nth-child(even) {
   background-color: rgba(17, 26, 30, 0.07);
+}
+
+.article .engagements p {
+  padding: 0;
+  margin: 0;
+}
+
+.article .engagements h4 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.article .engagements .engagement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 20px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.article .engagements .engagement p {
+  font-size: 15px;
+}
+
+.article .engagements .green {
+  background-color: #6ce299;
 }
 
 .article .spacer {
@@ -136,10 +202,23 @@ body {
   cursor: pointer;
 }
 
+@media screen and (max-width: 700px) {
+  .article .table-of-contents ol h4 {
+    margin-bottom: 20px;
+  }
+}
+
 .article .table-of-contents ol li {
   font-size: 14px;
   margin: 0 0 8px 36px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .article .table-of-contents ol li {
+    margin: 0 0 16px 36px;
+    font-size: 15px;
+  }
 }
 
 .article .table-of-contents ol h4:hover, .article .table-of-contents ol li:hover {

@@ -60,6 +60,18 @@ a, a:visited {
   opacity: 0.6;
 }
 
+@media screen and (max-width: 800px) {
+  .article-title .article-meta {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .article-title .article-meta span {
+    margin-bottom: 6px;
+  }
+}
+
 .article-title .article-meta span {
   display: -webkit-box;
   display: -ms-flexbox;
