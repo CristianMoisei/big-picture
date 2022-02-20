@@ -4,6 +4,12 @@ body {
   font-family: 'Lato', sans-serif !important;
 }
 
+@media screen and (max-width: 700px) {
+  body {
+    background-color: white;
+  }
+}
+
 #header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,41 +241,41 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  float: right;
-  background-color: rgba(17, 26, 30, 0.1);
-  height: 26px;
-  padding: 0 3px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  float: right;
+  background-color: rgba(17, 26, 30, 0.07);
+  height: 25px;
+  padding: 0 2px;
   border-radius: 7px;
   overflow: hidden;
   margin-top: 20px;
   margin-bottom: -10px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
-.article .segmented-control .label {
+.article .segmented-control .text {
   font-size: 14px;
   opacity: 1;
   padding: 2px 20px;
+  height: 40px !important;
 }
 
 .article .segmented-control span {
   cursor: pointer;
 }
 
-.article .segmented-control input[type="radio"] {
+.article .segmented-control input {
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  margin: 0;
 }
 
-.article .segmented-control input[type="radio"]:checked + span {
+.article .segmented-control input:checked + span {
   border-radius: 5px;
   background-color: white;
   font-weight: bold;

@@ -15,9 +15,9 @@ function renderSegmentedControl(segments) {
         let chartId = segments[s][0]
         let segmentTitle = segments[s][1]
 
-        document.write(`<div>`);
-        document.write(`<label><input ${s == 0 ? "checked" : ""} type="radio" id="${chartId}" onClick="selectElement('${segments}', '${chartId}')" name="${segments}"><span class="label">${segmentTitle}</span></label>`);
-        document.write(`</div>`);
+        // document.write(`<div>`);
+        document.write(`<label><input ${s == 0 ? "checked" : ""} type="radio" id="${chartId}" onClick="selectElement('${segments}', '${chartId}')" name="${segments}"><span class="text">${segmentTitle}</span></label>`);
+        // document.write(`</div>`);
     }
 
     document.write(`</div>`);
