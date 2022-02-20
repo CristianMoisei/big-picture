@@ -1,4 +1,4 @@
-@import "../variables.scss";
+@import "../variables/variables.scss";
 
 #header {
     display: flex;
@@ -59,6 +59,7 @@
 
     @media screen and (max-width: $maxWidth) {
         margin: 30px auto;
+        max-width: 400px;
     }
 }
 
@@ -72,10 +73,11 @@
     transition: all .5s ease;
     overflow: hidden;
     background-color: rgba($color: $navy, $alpha: 0.05);
+    margin-bottom: 20px;
 
     @media screen and (max-width: $maxWidth) {
         flex-direction: column-reverse;
-        margin: 0 20px;
+        margin: 20px;
     }
 
     @media screen and (min-width: $maxWidth) {
@@ -93,7 +95,7 @@
 
         @media screen and (max-width: $maxWidth) {
             margin-left: 0;
-            padding: 20px;
+            padding: 30px;
             
             h1 {
                 font-size: 30px;
@@ -124,5 +126,38 @@
             }    
         }
     }
-    
+}
+
+#subscribe {
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+
+    h2 {
+        font-size: 18px;
+        opacity: 0.7;
+        font-family: 'Lato', sans-serif !important;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        opacity: 0.7;
+        font-weight: 700;
+        font-family: 'Lato', sans-serif !important;
+        border-left: 1px solid rgba($color: $navy, $alpha: 0.2);
+        height: 40px;
+        width: 100px;
+        padding: 10px 20px;
+    }
+
+    @media screen and (max-width: $maxWidth) {
+        flex-direction: row;
+        padding: 30px;
+
+        p {
+            width: 100px;
+        }
+    }
 }
