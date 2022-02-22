@@ -103,6 +103,12 @@
         }    
     }
 
+    .article-meta {
+        @media screen and (max-width: 600px) {
+            flex-direction: column !important;
+        }    
+    }
+    
     #cover {
         width: 350px;
         height: 260px;
@@ -137,6 +143,7 @@
         font-size: 18px;
         opacity: 0.7;
         font-family: 'Lato', sans-serif !important;
+        padding-right: 15px;
     }
 
     p {

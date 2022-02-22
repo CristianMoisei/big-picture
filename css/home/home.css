@@ -141,6 +141,15 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .article .article-meta {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+}
+
 .article #cover {
   width: 350px;
   height: 260px;
@@ -186,6 +195,7 @@
   font-size: 18px;
   opacity: 0.7;
   font-family: 'Lato', sans-serif !important;
+  padding-right: 15px;
 }
 
 #subscribe p {

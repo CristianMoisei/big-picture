@@ -1,15 +1,42 @@
 @import "../variables/variables.scss";
 
 $articleWidth: 700px;
+$responsiveBreakpoint: 800px; // This is here to account for the 50px of padding on each side
 
 body {
     background-color: $navy;
     font-family: 'Lato', sans-serif !important;
 
-    @media screen and (max-width: $articleWidth) {
+    @media screen and (max-width: $responsiveBreakpoint) {
         background-color: white;
     }
 }
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+    
+.corner-ribbon{
+    width: 200px;
+    background: rgba($color: white, $alpha: 0.1);
+    opacity: 0.6;
+    position: fixed;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    top: 25px;
+    right: -50px;
+    left: auto;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    font-family: sans-serif;
+
+    @media screen and (max-width: $responsiveBreakpoint) {
+        display: none;
+    }
+}
+      
 
 #header {
     display: flex;
@@ -18,7 +45,7 @@ body {
     max-width: $articleWidth + 100;
     margin-bottom: 80px;
 
-    @media screen and (max-width: $articleWidth) {
+    @media screen and (max-width: $responsiveBreakpoint) {
         margin-bottom: 60px;
     }
 
@@ -43,7 +70,7 @@ body {
     margin: 30px auto 40px auto;
     padding: 50px;
 
-    @media screen and (max-width: $articleWidth) {
+    @media screen and (max-width: $responsiveBreakpoint) {
         margin: 0;
         border-radius: 0;
         padding: 30px;
@@ -82,7 +109,7 @@ body {
         margin-bottom: -30px;
         font-family: 'Merriweather', serif !important;
 
-        @media screen and (max-width: $articleWidth) {
+        @media screen and (max-width: $responsiveBreakpoint) {
             font-size: 40px;
         }
     }
@@ -172,7 +199,7 @@ body {
     }
 
     .table-of-contents {
-        margin-top: 40px;
+        margin: 40px 0 20px 0;
         opacity: 0.8;
 
         h2 {
@@ -183,7 +210,6 @@ body {
         }
 
         ol {
-            padding-bottom: 20px;
     
             h4 {
                 font-size: 16px;
@@ -191,7 +217,7 @@ body {
                 margin-bottom: 12px;
                 margin-top: 16px;
                 cursor: pointer;
-                @media screen and (max-width: $articleWidth) {
+                @media screen and (max-width: $responsiveBreakpoint) {
                     margin-bottom: 20px;
                 }
             }
@@ -200,7 +226,7 @@ body {
                 margin: 0 0 8px 36px;
                 cursor: pointer;
 
-                @media screen and (max-width: $articleWidth) {
+                @media screen and (max-width: $responsiveBreakpoint) {
                     margin: 0 0 16px 36px;
                     font-size: 15px;
                 }
