@@ -15,7 +15,19 @@ body {
 * {
     margin: 0;
     padding: 0;
-  }
+}
+
+.red {
+    color: #c71d1e;
+}
+
+.green {
+    color: green;
+}
+
+.yellow {
+    color: rgb(255, 166, 0);
+}
     
 .corner-ribbon{
     width: 200px;
@@ -122,13 +134,17 @@ body {
         font-size: 50px;
         font-weight: 700;
         opacity: 0.2;
-        margin-top: 60px;
+        margin-top: 70px;
         margin-bottom: -30px;
         font-family: 'Merriweather', serif !important;
 
         @media screen and (max-width: $responsiveBreakpoint) {
             font-size: 40px;
         }
+    }
+
+    .positive-margin {
+        margin-bottom: 40px;
     }
 
     h3 {
@@ -247,6 +263,7 @@ body {
         }
 
         ol {
+            margin-bottom: 8px;
     
             h4 {
                 font-size: 16px;
