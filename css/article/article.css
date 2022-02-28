@@ -86,7 +86,7 @@ body {
   background-color: white;
   border-radius: 16px;
   max-width: 700px;
-  margin: 30px auto 40px auto;
+  margin: 30px auto 20px auto;
   padding: 50px;
 }
 
@@ -384,5 +384,16 @@ body {
   font-weight: bold;
   -webkit-box-shadow: 0 0 5px rgba(17, 26, 30, 0.2);
           box-shadow: 0 0 5px rgba(17, 26, 30, 0.2);
+}
+
+#hyvor-talk-view {
+  max-width: 800px !important;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+  #hyvor-talk-view {
+    padding: 0 20px;
+  }
 }
 /*# sourceMappingURL=article.css.map */

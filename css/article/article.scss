@@ -79,7 +79,7 @@ body {
     background-color: white;
     border-radius: $largeBorderRadius;
     max-width: $articleWidth;
-    margin: 30px auto 40px auto;
+    margin: 30px auto 20px auto;
     padding: 50px;
 
     @media screen and (max-width: $responsiveBreakpoint) {
@@ -339,5 +339,14 @@ body {
                 box-shadow: 0 0 5px rgba($navy, .2);    
             }
         }
+    }
+}
+
+#hyvor-talk-view {
+    max-width: 800px !important;
+    margin: 0 auto;
+
+    @media screen and (max-width: $responsiveBreakpoint) {
+        padding: 0 20px;
     }
 }

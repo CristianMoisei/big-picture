@@ -9,3 +9,8 @@ function scrollToSection(content) {
         }
     }
 }
+
+function scrollToId(id) {
+    const y = document.getElementById(id).getBoundingClientRect().top + window.pageYOffset - 40;
+    window.scrollTo({ top: y });
+}

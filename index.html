@@ -18,20 +18,18 @@
     </div>
 
     <div class="content" id="articles">
-        <a href="us-decline.html">
-            <div class="article">
+            <div class="article" onclick="window.location.href = 'us-decline.html';">
                 <div class="article-title">
                     <h1>Is the United States truly in decline?</h1>
                     <div class="article-meta">
                         <span><img src="assets/article-meta/read-time.svg"><p>~20m read</p></span>
                         <span><img src="assets/article-meta/publish-date.svg"><p>March 2022</p></span>
                         <span><img src="assets/article-meta/author.svg"><p>Cristian Moisei</p></span>
-                        <span><img src="assets/article-meta/comments.svg"><p>18 comments</p></span>
+                        <span><img src="assets/article-meta/comments.svg"><span class="comment-number" data-talk-id="us-decline"></span>
                     </div>
                 </div>
                 <div id="cover"><img src="assets/us-decline-assets/cover.jpg"></div>
             </div>
-        </a>
 
         <a href="http://eepurl.com/hVgwDv" target="_blank">
             <div class="article" id="subscribe">
@@ -39,10 +37,17 @@
                 <p>Notify me</p>
             </div>
         </a>
-
-        
-
     </div>
+
+    <script type="text/javascript">
+        var HYVOR_TALK_WEBSITE = 6531;
+        var HYVOR_TALK_CONFIG = {
+            url: false,
+            id: 'us-decline'
+        };
+    </script>
+    <script async type="text/javascript" src="//talk.hyvor.com/web-api/count/"></script>
+    
 </body>
 
 </html>

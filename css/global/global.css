@@ -86,11 +86,24 @@ a, a:visited {
   margin-right: 8px;
 }
 
-.article-title .article-meta span p {
+.article-title .article-meta span p, .article-title .article-meta span .comment-number, .article-title .article-meta span .comment-text {
   font-size: 15px;
   font-weight: 700;
   opacity: 1 !important;
   margin-bottom: 0 !important;
+  text-decoration: none !important;
+}
+
+.article-title .article-meta span .comment-number {
+  margin-right: 0;
+}
+
+.article-title .article-meta .disqus-comment-count {
+  cursor: pointer;
+}
+
+.article-title .article-meta .disqus-comment-count :hover {
+  text-decoration: underline;
 }
 
 .article-title .article-meta :last-child {

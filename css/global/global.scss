@@ -22,7 +22,6 @@ a, a:visited {
     border-radius: 16px;
 }
 
-
 .article-title {
     display: flex;
     flex-direction: column;
@@ -57,13 +56,27 @@ a, a:visited {
                 margin-right: 8px;
             }
 
-            p {
+            p, .comment-number, .comment-text {
                 font-size: 15px;
                 font-weight: 700;
                 opacity: 1 !important; // This is here because otherwise article p would override the opacity
                 margin-bottom: 0 !important;
+                text-decoration: none !important;
+            }
+
+            .comment-number {
+                margin-right: 0;
             }
         }
+
+        .disqus-comment-count {
+            cursor: pointer;
+        }
+
+        .disqus-comment-count :hover {
+            text-decoration: underline;
+        }
+
 
         :last-child {
             margin-right: 0px;

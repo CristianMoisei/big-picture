@@ -74,6 +74,7 @@
     overflow: hidden;
     background-color: rgba($color: $navy, $alpha: 0.05);
     margin-bottom: 20px;
+    cursor: pointer;
 
     @media screen and (max-width: $maxWidth) {
         flex-direction: column-reverse;

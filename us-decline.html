@@ -6,7 +6,6 @@
 
     <script src="scripts/meta.js"></script>
     <script src="scripts/scrollToSection.js"></script>
-    <script src="scripts/charts-library.js"></script>
     <script src="scripts/renderChart.js"></script>
     <script src="scripts/SegmentedControl.js"></script>
 </head>
@@ -27,7 +26,7 @@
                 <span><img src="assets/article-meta/read-time.svg"><p>~20m read</p></span>
                 <span><img src="assets/article-meta/publish-date.svg"><p>March 2022</p></span>
                 <span><img src="assets/article-meta/author.svg"><p>Cristian Moisei</p></span>
-                <span><img src="assets/article-meta/comments.svg"><p>18 comments</p></span>
+                <span><img src="assets/article-meta/comments.svg"><span class="comment-number" onClick="scrollToId('hyvor-talk-view')" data-talk-id="us-decline"></span>
             </div>
         </div>
 
@@ -250,6 +249,19 @@
 
         <p>The United States could opt to cling to its position and risk finding itself in conflict with its challengers. Alternatively, it could embark on a partial and gradual retreat from the world stage, retaining regional hegemony and focusing on healing its domestic issues. This would result in other regional powers emerging and it would force current allies, especially in Europe and Asia, to take charge of their own foreign policies and contribute more for the protection of their people and interests. But it would also open up new opportunities for addressing problems that can only be solved at a regional or local level, and, if our leaders navigate this period of change well, the interdependent relationships of trade and cooperation that we have built and that have made all of us safer and more prosperous, can continue to serve future generations as well.</p>             
 
+    </div>
+
+    <div id="hyvor-talk-view"></div>
+    <script type="text/javascript">
+        var HYVOR_TALK_WEBSITE = 6531;
+        var HYVOR_TALK_CONFIG = {
+            url: false,
+            id: 'us-decline'
+        };
+    </script>
+    <script async type="text/javascript" src="//talk.hyvor.com/web-api/embed.js"></script>
+    <script async type="text/javascript" src="//talk.hyvor.com/web-api/count/"></script>
+
     <!-- Conclusion for global factors. none of these by themselves is enough to do any damage, but together they exert a lot of economic pressure and make it harder for the US to achieve its goals -->
     <!-- General conclusion: at the end: a lot of indicators do point to the US being in decline. What does the future hold? Several options -->
     <!-- At the end include a list of factors that were excluded and why: poverty rate, GDP -->
@@ -263,5 +275,6 @@
     <!-- SAT scores were not included because the test was redesigned twice, once in 2016 and once in xxxx -->
     <!-- GDP is one of the most well known and monitored metrics, but it can be very misleading. For example it doesn't account for the size of the population. What about GDP per capita then? That assumes a perfectly even distribution of wealth, which is again, not realistic. That's why we'll look at GINI -->
     <!-- The United States' GDP per capita bla bla, let's look at GINI -->
+    <!-- <script id="dsq-count-scr" src="//http-analysis-bureau-com.disqus.com/count.js" async></script> -->
 </body>
 </html>
