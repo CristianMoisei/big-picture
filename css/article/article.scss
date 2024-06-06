@@ -63,7 +63,7 @@ body {
 
     #logo {
         margin: 0;
-        background-color: rgba($color: $navy, $alpha: 0.1);
+        width: 80px;
         cursor: default;
     }
 
@@ -136,7 +136,7 @@ body {
         opacity: 0.2;
         margin-top: 70px;
         margin-bottom: -30px;
-        font-family: 'Merriweather', serif !important;
+        font-family: 'Montserrat', serif !important;
 
         @media screen and (max-width: $responsiveBreakpoint) {
             font-size: 40px;
@@ -225,7 +225,7 @@ body {
         font-size: 11px;
         margin-top: 16px !important;
         display: block;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         opacity: 1;
 
         span {

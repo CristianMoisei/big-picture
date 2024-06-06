@@ -10,23 +10,11 @@ a, a:visited {
     font-weight: 900;
 }
 
-#logo {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    user-select: none;
-    padding: 12px 20px 12px 16px;
-    margin-bottom: 50px;
-    height: 32px;
-    background-color: rgba($color: white, $alpha: 0.1);
-    border-radius: 16px;
-}
-
 .article-title {
     display: flex;
     flex-direction: column;
     align-self: center;
-    font-family: 'Merriweather', serif !important;
+    font-family: 'Montserrat', serif !important;
     
     h1 {
         font-size: 44px;
